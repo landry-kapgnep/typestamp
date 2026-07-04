@@ -4,6 +4,9 @@ Biometric authentication engine based on keystroke dynamics.
 
 The idea: the way you type (rhythm, key hold duration, transitions between keys) is a usable biometric signal. Typestamp builds a statistical profile from keystroke n-grams (digraphs, trigrams, 4-grams) and detects anomalies using z-scores.
 
+<img width="972" height="781" alt="image" src="https://github.com/user-attachments/assets/66f608fb-48b9-418f-b678-78cf0e701131" />
+
+
 ## How it works
 
 1. **Training**: the user types a reference phrase multiple times + free text. Typestamp records the timings (total_time, avg_flight) of each n-gram and computes mean/std per sequence.
@@ -32,3 +35,4 @@ python typestamp_app.py
 - No replay protection
 - Profiles are hardware-sensitive (different keyboard = retrain)
 - Research prototype, not production code
+- 
